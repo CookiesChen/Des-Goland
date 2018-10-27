@@ -2,7 +2,7 @@ package Feistel
 
 var keys =[16][48]int{}
 
-func Cryption(k [64]int, subkey [16][48]int)(output [64]int) {
+func Encrypt(k [64]int, subkey [16][48]int)(output [64]int) {
 	keys = subkey
 	lr := ipdisplace(k)
 	for i:=0; i < 16; i++ {
