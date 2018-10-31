@@ -2,8 +2,8 @@ package Feistel
 
 var keys =[16][48]int{}
 
-func Encrypt(k [64]int, subkey [16][48]int)(output [64]int) {
-	keys = subkey
+func Encrypt(k [64]int, subKey [16][48]int)(output [64]int) {
+	keys = subKey
 	lr := ipdisplace(k)
 	for i:=0; i < 16; i++ {
 		lr = interationT(lr, keys[i])
@@ -17,8 +17,8 @@ func Encrypt(k [64]int, subkey [16][48]int)(output [64]int) {
 	return output
 }
 
-func Decrypt(k [64]int, subkey [16][48]int)(output [64]int){
-	keys = subkey
+func Decrypt(k [64]int, subKey [16][48]int)(output [64]int){
+	keys = subKey
 	lr := ipdisplace(k)
 	for i:=15; i >= 0; i-- {
 		lr = interationT(lr, keys[i])

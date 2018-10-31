@@ -4,7 +4,7 @@ func sBox(input [8][6]int)(output [32]int){
 	table := getTable()
 	for i:=0; i < 8; i++ {
 		n := input[i][0] * 2 + input[i][5]
-		m := input[i][1] * 8 + input[i][2] * 4 + input[i][4] * 2 + input[i][4]
+		m := input[i][1] * 8 + input[i][2] * 4 + input[i][3] * 2 + input[i][4]
 		num := table[i][n*16 + m]
 		count := 0
 		for num != 0 {

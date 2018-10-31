@@ -1,6 +1,6 @@
 package Feistel
 
-import "Des-Goland/RoundFunction"
+import "github.com/CookiesChen/Des-Goland/RoundFunction"
 
 func interationT(preLR [64]int, key [48]int)(LR [64]int){
 	preL, preR := [32]int{}, [32]int{}
