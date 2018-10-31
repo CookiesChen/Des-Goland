@@ -3,8 +3,8 @@ package main
 import (
 	_ "crypto/des"
 	"fmt"
-	"github.com/CookiesChen/Des-Goland/Feistel"
-	"github.com/CookiesChen/Des-Goland/Key"
+	"github.com/CookiesChen/Des-Golang/Feistel"
+	"github.com/CookiesChen/Des-Golang/Key"
 )
 
 var k = [64]int{1,1,1,1}
